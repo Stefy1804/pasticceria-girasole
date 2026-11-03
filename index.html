@@ -30,7 +30,7 @@
       <a href="#noi">Chi siamo</a>
       <a href="#orari">Orari</a>
     </nav>
-    <a class="btn btn-sm" href="tel:+393330000000">Chiama</a>
+    <a class="btn btn-sm" href="#" data-demo>Chiama</a>
   </header>
 
   <main id="main">
@@ -154,8 +154,8 @@
         </table>
         <div>
           <p class="addr">Via dei Mille 24</p>
-          <p><a href="tel:+393330000000">+39 333 000 0000</a></p>
-          <a class="btn" href="tel:+393330000000">Chiama per ordinare</a>
+          <p><a href="#" data-demo>+39 333 000 0000</a></p>
+          <a class="btn" href="#" data-demo>Chiama per ordinare</a>
         </div>
       </div>
     </section>
@@ -186,5 +186,8 @@
     document.querySelectorAll('.sprinkles rect').forEach((r, i) => r.style.setProperty('--d', `${0.5 + i * 0.09}s`));
     document.querySelectorAll('.cats h2, .noi-ph, .noi-text, .torte-text, .card-form, .voci-head, .orari-grid').forEach((el) => { el.classList.add('rev'); io.observe(el); });
   </script>
+<script>
+(function(){var t;window.demoToast=function(){if(!t){t=document.createElement('div');t.setAttribute('role','status');t.style.cssText='position:fixed;left:50%;bottom:96px;transform:translate(-50%,16px);background:#fff;color:#111;border:1px solid rgba(0,0,0,.12);font:500 15px/1.4 system-ui,sans-serif;padding:12px 18px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,.25);z-index:99999;opacity:0;transition:opacity .25s,transform .25s;width:max-content;max-width:calc(100% - 32px);text-align:center;pointer-events:none';document.body.appendChild(t)}t.textContent='Sito dimostrativo: i contatti non sono attivi.';requestAnimationFrame(function(){t.style.opacity=1;t.style.transform='translate(-50%,0)'});clearTimeout(t._h);t._h=setTimeout(function(){t.style.opacity=0;t.style.transform='translate(-50%,16px)'},2600)};document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-demo]');if(a){e.preventDefault();window.demoToast()}})})();
+</script>
 </body>
 </html>
