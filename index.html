@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..800,100&family=Outfit:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13" />
 </head>
 <body>
   <a class="skip" href="#main">Vai al contenuto</a>
@@ -30,6 +30,15 @@
         <div class="block" aria-hidden="true"></div>
         <img class="ph ph-1" src="img/cornetti.jpg" alt="Cornetti dorati appena sfornati su carta da forno" width="1200" height="800" />
         <img class="ph ph-2" src="img/pasticcini.jpg" alt="Pasticcini alla crema con fragole e frutta fresca" width="1200" height="800" />
+        <svg class="sprinkles" viewBox="0 0 300 300" aria-hidden="true">
+          <rect x="20" y="40" width="22" height="7" rx="3.5" fill="#e4574b" transform="rotate(30 31 43)"/>
+          <rect x="250" y="30" width="22" height="7" rx="3.5" fill="#9cb86a" transform="rotate(-20 261 33)"/>
+          <rect x="60" y="250" width="22" height="7" rx="3.5" fill="#5aa0d8" transform="rotate(70 71 253)"/>
+          <rect x="240" y="230" width="22" height="7" rx="3.5" fill="#e4574b" transform="rotate(-50 251 233)"/>
+          <rect x="140" y="12" width="22" height="7" rx="3.5" fill="#f7c948" transform="rotate(10 151 15)"/>
+          <rect x="10" y="150" width="22" height="7" rx="3.5" fill="#d986b6" transform="rotate(-35 21 153)"/>
+          <rect x="275" y="140" width="22" height="7" rx="3.5" fill="#5aa0d8" transform="rotate(45 286 143)"/>
+        </svg>
       </div>
       <div class="hero-text">
         <h1>Dolci fatti a mano, ogni mattina.</h1>
@@ -165,21 +174,7 @@
       const w = tr.querySelector('.rv').offsetWidth + 20;
       tr.scrollBy({ left: w * +b.dataset.dir, behavior: 'smooth' });
     }));
-    const art = document.querySelector('.hero-art');
-    art.querySelectorAll('.sprinkles rect').forEach((r, i) => {
-      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-      r.replaceWith(g); g.appendChild(r);
-      g.style.setProperty('--k', 1.4 + (i % 3) * 0.9);
-      r.style.setProperty('--d', `${0.5 + i * 0.09}s`);
-    });
-    const rain = document.createElement('div'); rain.className = 'rain'; rain.setAttribute('aria-hidden', 'true'); art.appendChild(rain);
-    const cols = ['#e4574b', '#9cb86a', '#5aa0d8', '#f7c948', '#d986b6'];
-    for (let i = 0; i < 16; i++) {
-      const d = document.createElement('span'); d.className = 'drop';
-      d.style.cssText = `left:${4 + Math.random() * 90}%;background:${cols[i % 5]};--t:${7 + Math.random() * 5}s;--d:${0.3 + i * 0.6}s;--r:${Math.random() * 180}deg;--x:${(Math.random() - 0.5) * 60}px`;
-      rain.appendChild(d);
-    }
-    const setH = () => rain.style.setProperty('--h', art.offsetHeight + 40 + 'px'); setH(); addEventListener('resize', setH);
+    document.querySelectorAll('.sprinkles rect').forEach((r, i) => r.style.setProperty('--d', `${0.5 + i * 0.09}s`));
     document.querySelectorAll('.cats h2, .noi-ph, .noi-text, .torte-text, .card-form, .voci-head, .orari-grid').forEach((el) => { el.classList.add('rev'); io.observe(el); });
   </script>
 </body>
