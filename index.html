@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pasticceria Girasole, dolci fatti a mano ogni mattina</title>
+  <meta name="description" content="Pasticceria Girasole: cornetti, pasticcini, biscotti e torte su ordinazione, fatti a mano ogni mattina." />
+  <meta name="theme-color" content="#f2a33a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,600..800,100&family=Outfit:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=12" />
+</head>
+<body>
+  <a class="skip" href="#main">Vai al contenuto</a>
+  <header class="hdr">
+    <a class="logo" href="#top"><span class="logo-sun" aria-hidden="true"></span>Girasole<small>pasticceria</small></a>
+    <nav class="nav" aria-label="Principale">
+      <a href="#dolci">I dolci</a>
+      <a href="#torte">Torte su ordinazione</a>
+      <a href="#noi">Chi siamo</a>
+      <a href="#orari">Orari</a>
+    </nav>
+    <a class="btn btn-sm" href="tel:+393330000000">Chiama</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-art">
+        <div class="block" aria-hidden="true"></div>
+        <img class="ph ph-1" src="img/cornetti.jpg" alt="Cornetti dorati appena sfornati su carta da forno" width="1200" height="800" />
+        <img class="ph ph-2" src="img/pasticcini.jpg" alt="Pasticcini alla crema con fragole e frutta fresca" width="1200" height="800" />
+      </div>
+      <div class="hero-text">
+        <h1>Dolci fatti a mano, ogni mattina.</h1>
+        <p class="lead">Cornetti caldi dalle 6:30, pasticcini da vassoio, biscotti di casa e torte per le tue feste. Tutto preparato nel nostro laboratorio, dietro il banco.</p>
+        <div class="actions">
+          <a class="btn" href="#torte">Ordina una torta</a>
+          <a class="btn btn-line" href="#dolci">Guarda i dolci</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cats" id="dolci" aria-labelledby="cats-t">
+      <h2 id="cats-t">Cosa trovi al banco</h2>
+      <div class="cat-grid">
+        <article class="cat">
+          <img src="img/cornetti.jpg" alt="Cornetti sfogliati" loading="lazy" width="1200" height="800" />
+          <h3>Cornetti e colazioni</h3>
+          <p>Vuoti, alla crema, all'albicocca, integrali col miele. Sfornati due volte: alle 6:30 e alle 9.</p>
+        </article>
+        <article class="cat">
+          <img src="img/pasticcini.jpg" alt="Vassoio di pasticcini alla frutta" loading="lazy" width="1200" height="800" />
+          <h3>Pasticcini da vassoio</h3>
+          <p>Bignè, cannoncini, crostatine alla frutta. Il vassoio lo componi tu, a peso.</p>
+        </article>
+        <article class="cat">
+          <img src="img/biscotti.jpg" alt="Biscotti di pasta frolla" loading="lazy" width="900" height="600" />
+          <h3>Biscotti di casa</h3>
+          <p>Frolle al burro, cookies al cioccolato, cantucci alle mandorle. In sacchetto o nella scatola regalo.</p>
+        </article>
+        <article class="cat">
+          <img src="img/torta-fragole.jpg" alt="Fetta di torta con panna e fragole" loading="lazy" width="900" height="600" />
+          <h3>Torte per le feste</h3>
+          <p>Compleanni, battesimi, anniversari. Ci dici quante persone e cosa vi piace, al resto pensiamo noi.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="noi" id="noi" aria-labelledby="noi-t">
+      <figure class="noi-ph">
+        <img src="img/laboratorio.jpg" alt="Una pasticcera sorridente al lavoro sul bancone del laboratorio" loading="lazy" width="1400" height="933" />
+        <figcaption class="hand">il nostro laboratorio, alle 5 del mattino</figcaption>
+      </figure>
+      <div class="noi-text">
+        <h2 id="noi-t">Siamo in tre, e ci alziamo presto</h2>
+        <p>Il laboratorio è dietro il banco: quello che vedi in vetrina l'abbiamo impastato poche ore prima. Usiamo burro vero, uova di una cascina qui vicino e farine macinate a pietra.</p>
+        <p>Se passi la mattina presto, il profumo dei cornetti lo senti già dalla strada.</p>
+        <img class="noi-small" src="img/impasto.jpg" alt="Mani che impastano la pasta su un piano infarinato" loading="lazy" width="1200" height="800" />
+      </div>
+    </section>
+
+    <section class="torte" id="torte" aria-labelledby="torte-t">
+      <div class="torte-text">
+        <h2 id="torte-t">Ordina la tua torta</h2>
+        <p>Scrivici almeno tre giorni prima. Ti richiamiamo per decidere insieme gusto, forma e scritta.</p>
+        <ul class="ticks">
+          <li>Da 6 a 60 persone</li>
+          <li>Pan di Spagna, crema, panna, frutta fresca o cioccolato</li>
+          <li>Anche senza lattosio, su richiesta</li>
+        </ul>
+      </div>
+      <form class="card-form" id="order" novalidate>
+        <div class="field"><label for="f-nome">Nome</label><input id="f-nome" required autocomplete="given-name" /></div>
+        <div class="field"><label for="f-tel">Telefono</label><input id="f-tel" type="tel" inputmode="tel" required autocomplete="tel" /></div>
+        <div class="two">
+          <div class="field"><label for="f-data">Per quando</label><input id="f-data" type="date" required /></div>
+          <div class="field"><label for="f-pers">Persone</label><input id="f-pers" type="number" min="6" max="60" value="12" required /></div>
+        </div>
+        <div class="field"><label for="f-note">Gusti e idee <span class="opt">(facoltativo)</span></label><textarea id="f-note" rows="3" placeholder="Es. pan di Spagna, crema e fragole, scritta Buon compleanno Giulia"></textarea></div>
+        <p class="err" id="f-err" hidden>Inserisci nome, telefono e data.</p>
+        <button class="btn btn-block" type="submit">Invia la richiesta</button>
+        <div class="ok" id="f-ok" hidden><p class="hand">grazie!</p><p>Ti richiamiamo entro oggi per i dettagli.</p></div>
+      </form>
+    </section>
+
+    <section class="voci" aria-labelledby="voci-t">
+      <div class="voci-head">
+        <h2 id="voci-t">Dicono di noi</h2>
+        <p class="voci-avg"><span class="stars">★★★★<span class="half">★</span></span> 4,7 su 5 · 230 recensioni</p>
+        <div class="voci-nav"><button class="arr" data-dir="-1" aria-label="Recensione precedente">←</button><button class="arr" data-dir="1" aria-label="Recensione successiva">→</button></div>
+      </div>
+      <div class="voci-track" tabindex="0" aria-label="Recensioni dei clienti">
+        <blockquote class="rv"><span class="stars" aria-label="5 su 5 stelle">★★★★★</span><p>"Ho ordinato la torta per la comunione di mio figlio: bellissima e buonissima, pan di Spagna morbido e crema non troppo dolce. Tutti hanno chiesto dove l'avevamo presa."</p><cite>Giulia R.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="5 su 5 stelle">★★★★★</span><p>"Cornetti fantastici, sfogliati come si deve. La mattina c'è fila ma si scorre veloce e sono sempre gentili."</p><cite>Paolo M.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="4,5 su 5 stelle">★★★★<span class="half">★</span></span><p>"Pasticcini freschissimi, si sente che sono fatti in giornata. Prezzi giusti. Unico neo: la domenica a mezzogiorno è già finito quasi tutto!"</p><cite>Francesca B.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="5 su 5 stelle">★★★★★</span><p>"Il cornetto al pistacchio è pericoloso: uno non basta mai. Personale cordiale e locale pulitissimo."</p><cite>Davide L.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="4 su 5 stelle">★★★★</span><p>"Buonissime le crostatine alla frutta e i bignè. Il caffè è nella media, ma per i dolci torno sicuramente."</p><cite>Sara T.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="5 su 5 stelle">★★★★★</span><p>"Ci siamo affidati a loro per la torta di nozze. Ci hanno seguito in tutto, dalla prova assaggio alla consegna. Impeccabili."</p><cite>Marco V.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="4,5 su 5 stelle">★★★★<span class="half">★</span></span><p>"Biscotti di frolla che sanno di burro vero, come quelli della nonna. Ho preso la scatola regalo per Natale ed è stata un successo."</p><cite>Elena C.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="5 su 5 stelle">★★★★★</span><p>"Vassoio di paste della domenica sempre perfetto. Ti aiutano a sceglierle e te lo confezionano benissimo."</p><cite>Andrea F.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="4 su 5 stelle">★★★★</span><p>"Torta di compleanno buona e decorata con cura. Avrei preferito un po' meno panna, ma la rifarei."</p><cite>Chiara P.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="5 su 5 stelle">★★★★★</span><p>"Colazione top: cornetto caldo alle 7 e cappuccino fatto bene. Diventata la mia tappa fissa prima del lavoro."</p><cite>Luca G.</cite></blockquote>
+        <blockquote class="rv"><span class="stars" aria-label="4,5 su 5 stelle">★★★★<span class="half">★</span></span><p>"Hanno preparato una torta senza lattosio per mia madre ed era buonissima, nessuno si è accorto della differenza."</p><cite>Martina S.</cite></blockquote>
+      </div>
+    </section>
+
+    <section class="orari" id="orari" aria-labelledby="orari-t">
+      <h2 id="orari-t">Orari e contatti</h2>
+      <div class="orari-grid">
+        <table>
+          <caption class="sr">Orari di apertura</caption>
+          <tr><th scope="row">Lunedì</th><td>Chiuso</td></tr>
+          <tr><th scope="row">Martedì - Sabato</th><td>6:30 - 13:00, 16:00 - 19:30</td></tr>
+          <tr><th scope="row">Domenica</th><td>7:00 - 13:00</td></tr>
+        </table>
+        <div>
+          <p class="addr">Via dei Mille 24</p>
+          <p><a href="tel:+393330000000">+39 333 000 0000</a></p>
+          <a class="btn" href="tel:+393330000000">Chiama per ordinare</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p class="logo"><span class="logo-sun" aria-hidden="true"></span>Girasole<small>pasticceria</small></p>
+    <p class="small">Sito dimostrativo · 2026</p>
+  </footer>
+
+  <script>
+    const f = document.getElementById('order');
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const ok = ['f-nome', 'f-tel', 'f-data'].every((id) => document.getElementById(id).value.trim());
+      document.getElementById('f-err').hidden = ok;
+      if (!ok) return;
+      [...f.querySelectorAll('.field, .two, button')].forEach((el) => (el.hidden = true));
+      document.getElementById('f-ok').hidden = false;
+    });
+    const io = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting && (e.target.classList.add('in'), io.unobserve(e.target))), { threshold: 0.15 });
+    document.querySelectorAll('.hero-art, .cat').forEach((el) => io.observe(el));
+    const tr = document.querySelector('.voci-track');
+    document.querySelectorAll('.arr').forEach((b) => b.addEventListener('click', () => {
+      const w = tr.querySelector('.rv').offsetWidth + 20;
+      tr.scrollBy({ left: w * +b.dataset.dir, behavior: 'smooth' });
+    }));
+    const art = document.querySelector('.hero-art');
+    art.querySelectorAll('.sprinkles rect').forEach((r, i) => {
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      r.replaceWith(g); g.appendChild(r);
+      g.style.setProperty('--k', 1.4 + (i % 3) * 0.9);
+      r.style.setProperty('--d', `${0.5 + i * 0.09}s`);
+    });
+    const rain = document.createElement('div'); rain.className = 'rain'; rain.setAttribute('aria-hidden', 'true'); art.appendChild(rain);
+    const cols = ['#e4574b', '#9cb86a', '#5aa0d8', '#f7c948', '#d986b6'];
+    for (let i = 0; i < 16; i++) {
+      const d = document.createElement('span'); d.className = 'drop';
+      d.style.cssText = `left:${4 + Math.random() * 90}%;background:${cols[i % 5]};--t:${7 + Math.random() * 5}s;--d:${0.3 + i * 0.6}s;--r:${Math.random() * 180}deg;--x:${(Math.random() - 0.5) * 60}px`;
+      rain.appendChild(d);
+    }
+    const setH = () => rain.style.setProperty('--h', art.offsetHeight + 40 + 'px'); setH(); addEventListener('resize', setH);
+    document.querySelectorAll('.cats h2, .noi-ph, .noi-text, .torte-text, .card-form, .voci-head, .orari-grid').forEach((el) => { el.classList.add('rev'); io.observe(el); });
+  </script>
+</body>
+</html>
